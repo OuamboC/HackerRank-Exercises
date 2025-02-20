@@ -29,32 +29,27 @@ public class ParkingTicket {
          *  Rule 5 : if ((T > 60) || (|T3-T2| <60) -Grant Ticket )
          *  Rule 6: if ((T = 60) || (|T3-T2| = 60) - Do not  Grant Ticket )
          */
-        //Create an ArrayList to store  Tickets
-        ArrayList<String> ticket = new ArrayList<>();
-
+        //Use HashSet to store only one tickets  : Rule 4
+        //HashSet<String> registrationticket = new HashSet<>();
+            //Initialise the count of egistrationticket to 0
+        int registrationticket =0 ;
         for(String registration : myMap.keySet()){
-            for(int time : myMap.get(registration)){
-                if(time == 60){
-                    continue;
-                }
-                if(time == 120){
-                    if(!ticket.contains(registration))
-                        ticket.add(registration);
-                }
-                if(time == 180){
-                    continue;
-                }
-                if(time > 60 || Math.abs(time) < 60){
-                    if(!ticket.contains(registration))
-                        ticket.add(registration);
-                }
-                if( Math.abs(time) == 60){
+            for(int i=0;i< myMap.get(registration).size();i=i+2){
+                if((myMap.get(registration).get(i+1) -myMap.get(registration).get(i)) > 60){
+                    registrationticket ++;
                     break;
                 }
+                if(i+2 < myMap.get(registration).size()){
+                    if((myMap.get(registration).get(i+2) - myMap.get(registration).get(i+1)) < 60){
+                        registrationticket++;
+                        break;
+                    }
+                }
+
             }
 
         }
-        return ticket.size();
+        return registrationticket;
     }
 
 
