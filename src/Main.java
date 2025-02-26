@@ -43,6 +43,19 @@ public class Main {
         List<Integer> times = List.of(20,30,30,40,90,101);
         System.out.println(parkingTickets.ParkingTickets(6,registrations,times));
 
+        SnakeToCamelCase snakeToCamelCase = new SnakeToCamelCase ();
+        System.out.println(SnakeToCamelCase.SnakeToCamel("var_name_1"));
+
+        System.out.println(SnakeToCamelCase.SnakeToCamel("__var_name_1"));
+
+        System.out.println(SnakeToCamelCase.SnakeToCamel("var"));
+
+
+        System.out.println(MorseCodeEquivalent .MorseEquivalent("abc","wske"));
+        System.out.println(MorseCodeEquivalent.MorseEquivalent("abcdefg", "tesaetdmneaae"));
+        System.out.println(MorseCodeEquivalent.MorseEquivalent("helloworld", "ihdrwntotenetfe"));
+        System.out.println(MorseCodeEquivalent.MorseEquivalent("eeeee", "see"));
+        System.out.println(MorseCodeEquivalent.MorseEquivalent("ttttt", "ao"));
 
     }
 
