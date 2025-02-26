@@ -41,18 +41,6 @@ public class MorseCodeEquivalent {
         // System.out.println(Bconversion);
 
         //Now by removing ,adding and /or moving spaces . I need to return true of they are equivalent otherwise False
-
-        //Step 1 : Remove spaces
-
-//        if (Aconversion.toString().trim().equals(Bconversion.toString().trim())) {
-//
-//            return true;
-//        } else {
-//
-//            return false;
-//        }
-
-
         //Step 1: Remove spaces
         boolean isEquivalent = Aconversion.toString().trim().equals(Bconversion.toString().trim());
 
