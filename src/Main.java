@@ -64,6 +64,8 @@ public class Main {
         grid.add("^<^<");
         //TakingSteps.TakeSteps(grid.size(), 1,grid);
         System.out.println(TakingSteps.TakeSteps(grid.size(), 1,grid));
+
+        System.out.println(PlayfairCodeSquare.PlayfairCode("WECANNOTTALKABOUTMOTLEYCRUEINTOOMUCHDETAIL","NIKKYSIX"));
     }
 
 }
