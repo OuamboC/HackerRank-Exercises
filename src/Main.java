@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -56,7 +57,13 @@ public class Main {
         System.out.println(MorseCodeEquivalent.MorseEquivalent("helloworld", "ihdrwntotenetfe"));
         System.out.println(MorseCodeEquivalent.MorseEquivalent("eeeee", "see"));
         System.out.println(MorseCodeEquivalent.MorseEquivalent("ttttt", "ao"));
-
+        List<String> grid = new ArrayList<>();
+        grid.add(">v>v");
+        grid.add("^>^v");
+        grid.add("^v<v");
+        grid.add("^<^<");
+        //TakingSteps.TakeSteps(grid.size(), 1,grid);
+        System.out.println(TakingSteps.TakeSteps(grid.size(), 1,grid));
     }
 
 }
